@@ -40,9 +40,9 @@ public class Window extends JFrame {
     public void selectFile(ActionEvent e) {
         JFileChooser fileChooser = new JFileChooser(System.getProperty("user.home") + File.separatorChar + "My Documents");
         fileChooser.setFileFilter(new FileNameExtensionFilter("Coma separated value", "csv"));
-        if (fileChooser.showOpenDialog(null) == JFileChooser.APPROVE_OPTION) {
+        
+        if (fileChooser.showOpenDialog(null) == JFileChooser.APPROVE_OPTION)
             path = fileChooser.getSelectedFile().getPath();
-        }
     }
     
     public void generateXML(ActionEvent e) {
