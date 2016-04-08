@@ -5,16 +5,27 @@
  */
 package com.sophos.xml;
 
+import com.csvreader.CsvReader;
+import com.sophos.Client;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
 /**
  *
  * @author jonatan
  */
 public class XMLFactory {
     
-    public static void build(String path) {
-//        if id type A then
-//            XMLTypeABuilder.build(path);
-//        else
-//            XMLTypeBBuilder.build(path);
+    public static void build(String path) throws FileNotFoundException, IOException {
+        try (CSVClientReader reader = new CSVClientReader(path)) {
+            while (reader.hasNext()) {
+                Client client = reader.next();
+
+                switch (client.type()) {
+                    case Client.TYPE_A : XMLTypeABuilder.build(client); break;
+                    case Client.TYPE_B : XMLTypeBBuilder.build(client); break;
+                }
+            }
+        }
     }
 }

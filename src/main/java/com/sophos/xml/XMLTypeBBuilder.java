@@ -5,13 +5,15 @@
  */
 package com.sophos.xml;
 
+import com.sophos.Client;
+
 /**
  *
  * @author jonatan
  */
 class XMLTypeBBuilder {
     
-    static void build() {
+    static void build(Client client) {
         
     }
 }
