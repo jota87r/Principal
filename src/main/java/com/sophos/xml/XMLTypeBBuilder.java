@@ -9,12 +9,9 @@ package com.sophos.xml;
  *
  * @author jonatan
  */
-public class XMLFactory {
+class XMLTypeBBuilder {
     
-    public static void build(String path) {
-//        if id type A then
-//            XMLTypeABuilder.build(path);
-//        else
-//            XMLTypeBBuilder.build(path);
+    static void build() {
+        
     }
 }
