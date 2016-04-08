@@ -5,14 +5,13 @@
  */
 package com.sophos.xml;
 
-import com.csvreader.CsvReader;
 import com.sophos.Client;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
 /**
  *
- * @author jonatan
+ * @author carlos ignacio restrepo
  */
 public class XMLFactory {
     

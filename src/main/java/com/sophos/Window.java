@@ -5,18 +5,24 @@
  */
 package com.sophos;
 
+import com.sophos.xml.XMLFactory;
 import java.awt.event.ActionEvent;
 import java.io.File;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JFileChooser;
 import javax.swing.JFrame;
 import javax.swing.filechooser.FileNameExtensionFilter;
+import lombok.extern.java.Log;
 
 /**
  *
- * @author jonatan
+ * @author carlos ignacio restrepo
  */
+@Log
 public class Window extends JFrame {
     
     private String path;
@@ -46,5 +52,10 @@ public class Window extends JFrame {
     }
     
     public void generateXML(ActionEvent e) {
+        try {
+            XMLFactory.build(path);
+        } catch (IOException ex) {
+            log.throwing(this.getClass().toString(), path, ex);
+        }
     }
 }

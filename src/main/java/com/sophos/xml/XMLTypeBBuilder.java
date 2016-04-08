@@ -6,14 +6,16 @@
 package com.sophos.xml;
 
 import com.sophos.Client;
+import lombok.extern.java.Log;
 
 /**
  *
- * @author jonatan
+ * @author carlos ignacio restrepo
  */
+@Log
 class XMLTypeBBuilder {
     
     static void build(Client client) {
-        
+        log.info(client.toString());
     }
 }
