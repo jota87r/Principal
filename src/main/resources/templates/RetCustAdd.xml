@@ -1,0 +1,280 @@
+<?xml version="1.0"?>
+
+-<NS2:FIXML xmlns:NS2="http://www.finacle.com/fixml">
+
+
+    -<NS2:Header>
+
+
+        -<NS2:RequestHeader>
+
+
+            -<NS2:MessageKey>
+                <NS2:RequestUUID>$UUID</NS2:RequestUUID>
+                <NS2:ServiceRequestId>RetCustAdd</NS2:ServiceRequestId>
+                <NS2:ServiceRequestVersion>10.6</NS2:ServiceRequestVersion>
+                <NS2:ChannelId>CRM</NS2:ChannelId>
+                <NS2:LanguageId>en_US</NS2:LanguageId>
+            </NS2:MessageKey>
+
+
+            -<NS2:RequestMessageInfo>
+                <NS2:BankId>1000</NS2:BankId>
+                <NS2:TimeZone/>
+                <NS2:EntityId> </NS2:EntityId>
+                <NS2:EntityType/>
+                <NS2:ArmCorrelationId/>
+                <NS2:MessageDateTime>2016-03-14T10:50:40.919</NS2:MessageDateTime>
+            </NS2:RequestMessageInfo>
+
+
+            -<NS2:Security>
+                -<NS2:Token>
+                    -<NS2:PasswordToken>
+                        <NS2:UserId/>
+                        <NS2:Password/>
+                    </NS2:PasswordToken>
+                </NS2:Token>
+
+                <NS2:FICertToken> </NS2:FICertToken>
+                <NS2:RealUserLoginSessionId/>
+                <NS2:RealUser/>
+                <NS2:RealUserPwd/>
+                <NS2:SSOTransferToken> </NS2:SSOTransferToken>
+            </NS2:Security>
+
+            -<NS2:CustomInfo>
+                -<NS2:table>
+                    <NS2:key/>
+                    <NS2:value/>
+                </NS2:table>
+            </NS2:CustomInfo>
+        </NS2:RequestHeader>
+    </NS2:Header>
+
+
+    -<NS2:Body>
+
+
+        -<NS2:RetCustAddRequest>
+
+
+            -<NS2:RetCustAddRq>
+
+
+                -<NS2:RetGenInfo>
+
+                    <NS2:CustStatus>02</NS2:CustStatus>
+
+                    <NS2:TFPartyInd>Y</NS2:TFPartyInd>
+
+                    <NS2:IsEbankingEnabled>N</NS2:IsEbankingEnabled>
+
+
+                    -<NS2:ContactInfo>
+
+
+                        -<NS2:PostAddrRec>
+
+                            <NS2:AddrFormat>F</NS2:AddrFormat>
+
+
+                            -<NS2:AddrType>
+
+                                <NS2:Value>Mailing</NS2:Value>
+
+                            </NS2:AddrType>
+
+
+                            -<NS2:PostAddr1>
+
+                                <NS2:AddressLabel>NO INFORMA</NS2:AddressLabel>
+
+                            </NS2:PostAddr1>
+
+                            <NS2:City>0000</NS2:City>
+
+                            <NS2:State>CO999</NS2:State>
+
+                            <NS2:Country>CO</NS2:Country>
+
+                            <NS2:PostalCode>99999</NS2:PostalCode>
+
+                            <NS2:StartDt>2016-03-14T10:50:40.906</NS2:StartDt>
+
+                        </NS2:PostAddrRec>
+
+
+                        -<NS2:PhoneEmailInfo>
+
+                            <NS2:PhoneOrEmail>EMAIL</NS2:PhoneOrEmail>
+
+                            <NS2:EmailID>XXXXX@XXXX.com</NS2:EmailID>
+
+
+                            -<NS2:PhoneEmailType>
+
+                                <NS2:Value>Mailing</NS2:Value>
+
+                            </NS2:PhoneEmailType>
+
+                        </NS2:PhoneEmailInfo>
+
+                        <NS2:PreferredAddress>Mailing</NS2:PreferredAddress>
+
+                        <NS2:PreferredEmail>Y</NS2:PreferredEmail>
+
+                    </NS2:ContactInfo>
+
+                    <NS2:CustId>$CIF_ID</NS2:CustId>
+
+                    <NS2:BirthDt>1990-01-01T00:00:00.000</NS2:BirthDt>
+
+                    <NS2:ShortName>NO INFORMA</NS2:ShortName>
+
+                    <NS2:CustLang>es_ES</NS2:CustLang>
+
+                    <NS2:CustMinorInd>N</NS2:CustMinorInd>
+
+                    <NS2:NRCustInd>N</NS2:NRCustInd>
+
+
+                    -<NS2:PersonNameInfo>
+
+                        <NS2:LastName>PN47</NS2:LastName>
+
+                        <NS2:FirstName>DELAY4</NS2:FirstName>
+
+                        <NS2:MiddleName>VINCULADO47</NS2:MiddleName>
+
+                    </NS2:PersonNameInfo>
+
+                    <NS2:Gender>N</NS2:Gender>
+
+                    <NS2:NativeLangCode>es_ES</NS2:NativeLangCode>
+
+                    <NS2:PrefName>DELAY47 VINCULADO47 PN47</NS2:PrefName>
+
+                    <NS2:Region>NA</NS2:Region>
+
+                    <NS2:RelationshipOpeningDt>2016-03-14T10:50:40.906</NS2:RelationshipOpeningDt>
+
+                    <NS2:Sector>99999</NS2:Sector>
+
+                    <NS2:SubSector>00010</NS2:SubSector>
+
+                    <NS2:SegmentationClass>99</NS2:SegmentationClass>
+
+                    <NS2:StaffInd>N</NS2:StaffInd>
+
+                    <NS2:TdsTbl>NA</NS2:TdsTbl>
+
+
+                    -<NS2:RetGenIdentityDocInfo>
+
+                        <NS2:PrefUniqueIdInd>Y</NS2:PrefUniqueIdInd>
+
+                        <NS2:CountryOfIssue>CO</NS2:CountryOfIssue>
+
+                        <NS2:DocCode>FS001</NS2:DocCode>
+
+                        <NS2:DocTypeCode>FS001</NS2:DocTypeCode>
+
+                        <NS2:PlaceOfIssue>5001000</NS2:PlaceOfIssue>
+
+                        <NS2:RefNum>$NUMDOC</NS2:RefNum>
+
+                        <NS2:DocIssueDt>2000-01-03T00:00:00.000</NS2:DocIssueDt>
+
+                    </NS2:RetGenIdentityDocInfo>
+
+                    <NS2:TitlePrefix>0008</NS2:TitlePrefix>
+
+                    <NS2:PrimaryServiceCenter>BC000025</NS2:PrimaryServiceCenter>
+
+                    <NS2:PrimaryRMID>GERENTE</NS2:PrimaryRMID>
+
+                </NS2:RetGenInfo>
+
+
+                -<NS2:DemographicInfo>
+
+                    <NS2:MaritalStatus>NA</NS2:MaritalStatus>
+
+                    <NS2:Nationality>CO</NS2:Nationality>
+
+                    <NS2:EmploymentType>NA</NS2:EmploymentType>
+
+                </NS2:DemographicInfo>
+
+
+                -<NS2:PsychographicInfo>
+
+                    <NS2:PrefLocale>es_ES</NS2:PrefLocale>
+
+
+                    -<NS2:CustCurInfo>
+
+                        <NS2:CurCode>COP</NS2:CurCode>
+
+                        <NS2:CreditDiscountPcnt>00</NS2:CreditDiscountPcnt>
+
+                        <NS2:DebitDiscountPcnt>00</NS2:DebitDiscountPcnt>
+
+                        <NS2:WithholdingTaxPcnt>00</NS2:WithholdingTaxPcnt>
+
+                        <NS2:WithHoldingTaxFlrLimit>0</NS2:WithHoldingTaxFlrLimit>
+
+                        <NS2:PrefExpDt>2099-12-31T00:00:00.000</NS2:PrefExpDt>
+
+
+                        -<NS2:PrefType>
+
+                            <NS2:Value>CURRENCY</NS2:Value>
+
+                        </NS2:PrefType>
+
+                    </NS2:CustCurInfo>
+
+                </NS2:PsychographicInfo>
+
+
+                -<NS2:MappingInfo>
+
+                    <NS2:ChannelId>CRM</NS2:ChannelId>
+
+                </NS2:MappingInfo>
+
+
+                -<NS2:TradeFinanceInfo>
+
+                    <NS2:CustNative>Y</NS2:CustNative>
+
+                    <NS2:InlandTradeAllowed>Y</NS2:InlandTradeAllowed>
+
+                </NS2:TradeFinanceInfo>
+
+            </NS2:RetCustAddRq>
+
+
+            -<NS2:RetCustAdd_CustomData>
+
+                <NS2:GuardedbySuperFinancier>N</NS2:GuardedbySuperFinancier>
+
+                <NS2:Total_Liabilites>100</NS2:Total_Liabilites>
+
+                <NS2:Net_Profit>100</NS2:Net_Profit>
+
+                <NS2:CustExempt543>N</NS2:CustExempt543>
+
+                <NS2:Education>01</NS2:Education>
+
+                <NS2:Resident>Y</NS2:Resident>
+
+            </NS2:RetCustAdd_CustomData>
+
+        </NS2:RetCustAddRequest>
+
+    </NS2:Body>
+
+</NS2:FIXML>

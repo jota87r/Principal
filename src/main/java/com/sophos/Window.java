@@ -15,6 +15,7 @@ import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JFileChooser;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import lombok.extern.java.Log;
 
@@ -47,7 +48,7 @@ public class Window extends JFrame {
         JFileChooser fileChooser = new JFileChooser(System.getProperty("user.home") + File.separatorChar + "My Documents");
         fileChooser.setFileFilter(new FileNameExtensionFilter("Coma separated value", "csv"));
         
-        if (fileChooser.showOpenDialog(null) == JFileChooser.APPROVE_OPTION)
+        if (fileChooser.showOpenDialog(this) == JFileChooser.APPROVE_OPTION)
             path = fileChooser.getSelectedFile().getPath();
     }
     
@@ -57,5 +58,6 @@ public class Window extends JFrame {
         } catch (IOException ex) {
             log.throwing(this.getClass().toString(), path, ex);
         }
+        JOptionPane.showMessageDialog(this, "Archivos generados satisfactoriamente");
     }
 }

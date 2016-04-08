@@ -29,4 +29,5 @@ dependencies {
     compile 'net.sourceforge.javacsv:javacsv:2.0'
     runtime 'net.sourceforge.javacsv:javacsv:2.0'
     compile 'org.projectlombok:lombok:1.16.8'
+    compile 'org.apache.velocity:velocity:1.7'
 }
