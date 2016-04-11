@@ -8,11 +8,14 @@ package com.sophos.xml;
 import com.sophos.Client;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.logging.Level;
+import lombok.extern.java.Log;
 
 /**
  *
  * @author carlos ignacio restrepo
  */
+@Log
 public class XMLFactory {
     
     public static void build(String path) throws FileNotFoundException, IOException {
@@ -24,6 +27,8 @@ public class XMLFactory {
                     case Client.TYPE_A : XMLTypeABuilder.build(client); break;
                     case Client.TYPE_B : XMLTypeBBuilder.build(client); break;
                 }
+                
+                log.log(Level.WARNING, "Generado archivo para el cliente con tipo id {0} y numero de documento {1}", new Object[]{client.getCIF_ID(), client.getNUMDOC()});
             }
         }
     }
