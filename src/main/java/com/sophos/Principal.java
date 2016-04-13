@@ -1,7 +1,7 @@
 package com.sophos;
 
 import com.sophos.log.LoggerConfig;
-import java.awt.EventQueue;
+import javax.swing.SwingUtilities;
 import java.io.IOException;
 
 public class Principal {
@@ -11,6 +11,10 @@ public class Principal {
      */
     public static void main(String[] args) throws IOException {
         LoggerConfig.setup();
-        EventQueue.invokeLater(() -> { new Window(); });
+        SwingUtilities.invokeLater(new Runnable() {
+    		public void run() {
+        		new Window();
+    		}
+		});
     }
 }

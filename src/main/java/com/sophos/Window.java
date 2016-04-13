@@ -6,6 +6,7 @@
 package com.sophos;
 
 import com.sophos.xml.XMLFactory;
+import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.io.File;
 import java.io.IOException;
@@ -33,12 +34,22 @@ public class Window extends JFrame {
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLayout(new BoxLayout(getContentPane(), BoxLayout.PAGE_AXIS));
         
+        final Window instance = this;
+        
         JButton chooseFile = new JButton("Seleccionar archivo");
-        chooseFile.addActionListener(this::selectFile);
+        chooseFile.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                instance.selectFile(e);
+            }
+        });
         getContentPane().add(chooseFile);
         
         JButton createXML = new JButton("Generar");
-        createXML.addActionListener(this::generateXML);
+        createXML.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                instance.generateXML(e);
+            }
+        });
         getContentPane().add(createXML);
     }
     
